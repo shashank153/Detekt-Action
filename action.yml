@@ -62,6 +62,7 @@ inputs:
   image:
     description: 'Docker image to use for detekt'
     required: false
+    default: 'docker://ghcr.io/shashank153/detekt-action:v1.0.0'
 runs:
   using: 'docker'
   image: ${{ inputs.image }}
