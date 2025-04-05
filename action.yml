@@ -59,12 +59,9 @@ inputs:
       'Specific inputs for detekt (the --input argument for detekt-cli)'
       Example: 'path/to/dir1,path/to/dir2'
     required: false
-  image:
-    description: 'Docker image to use for detekt'
-    required: true
 runs:
   using: 'docker'
-  image: ${{ inputs.image }}
+  image: ghcr.io/shashank153/detekt-action:v1.0.0
   args:
     - ${{ inputs.github_token }}
     - ${{ inputs.reviewdog_level }}
